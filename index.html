@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Психолог – Визитка</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Raleway:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="language-switcher">
+    <button onclick="setLang('ru')">Рус</button>
+    <button onclick="setLang('en')">Eng</button>
+    <button onclick="setLang('he')">עב</button>
+    <button onclick="setLang('ua')">Укр</button>
+  </div>
+
+  <div class="card">
+    <div class="photo-section">
+      <img src="IMG_4010.jpg" alt="Фото психолога" class="profile-img" />
+    </div>
+
+    <h1 data-key="name">Анна Иванова</h1>
+    <h2 data-key="title">Лицензированный психолог</h2>
+
+    <p class="description" data-key="description">
+      Помогаю справиться с тревогой, стрессом и внутренними кризисами.
+    </p>
+
+    <div class="section">
+      <h3 data-key="servicesTitle">Услуги:</h3>
+      <ul data-key="servicesList">
+        <li>Индивидуальные консультации</li>
+        <li>Онлайн и оффлайн встречи</li>
+        <li>Поддержка при тревожности, депрессии</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h3 data-key="educationTitle">Образование:</h3>
+      <p data-key="education">МГУ, факультет психологии, 2015</p>
+    </div>
+
+    <div class="section">
+        <h3 data-key="contactsTitle">Контакты:</h3>
+        <p>Телефон: +972-50-123-4567</p>
+        <p>Email: anna@example.com</p>
+        <div class="social-links">
+          <a href="https://wa.me/972501234567" target="_blank">
+            <img src="whatsapp.svg" alt="WhatsApp" />
+          </a>
+          <a href="https://t.me/psychologist_anna" target="_blank">
+            <img src="telegram.svg" alt="Telegram" />
+          </a>
+        </div>
+      </div>
+
+    <button onclick="bookAppointment()" data-key="button">Записаться на консультацию</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
