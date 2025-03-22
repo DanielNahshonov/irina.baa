@@ -8,54 +8,95 @@
   <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-  <div class="language-switcher">
-    <button onclick="setLang('ru')">Рус</button>
-    <button onclick="setLang('en')">Eng</button>
-    <button onclick="setLang('he')">עב</button>
-    <button onclick="setLang('ua')">Укр</button>
-  </div>
+  <header class="main-header">
+    <div class="container">
+      <div class="logo">
+        <button class="consult-btn" onclick="bookAppointment()" data-key="button">Записаться</button>
+      </div>
+      <button class="burger" onclick="toggleMenu()">☰</button>
 
-  <div class="card">
-    <div class="photo-section">
-      <img src="IMG_4010.jpg" alt="Фото психолога" class="profile-img" />
-    </div>
-
-    <h1 data-key="name">Анна Иванова</h1>
-    <h2 data-key="title">Лицензированный психолог</h2>
-
-    <p class="description" data-key="description">
-      Помогаю справиться с тревогой, стрессом и внутренними кризисами.
-    </p>
-
-    <div class="section">
-      <h3 data-key="servicesTitle">Услуги:</h3>
-      <ul data-key="servicesList">
-        <li>Индивидуальные консультации</li>
-        <li>Онлайн и оффлайн встречи</li>
-        <li>Поддержка при тревожности, депрессии</li>
-      </ul>
-    </div>
-
-    <div class="section">
-      <h3 data-key="educationTitle">Образование:</h3>
-      <p data-key="education">МГУ, факультет психологии, 2015</p>
-    </div>
-
-    <div class="section">
-        <h3 data-key="contactsTitle">Контакты:</h3>
-        <p>Телефон: +972-50-123-4567</p>
-        <p>Email: anna@example.com</p>
-        <div class="social-links">
-          <a href="https://wa.me/972501234567" target="_blank">
-            <img src="whatsapp.svg" alt="WhatsApp" />
-          </a>
-          <a href="https://t.me/psychologist_anna" target="_blank">
-            <img src="telegram.svg" alt="Telegram" />
-          </a>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="#home" data-key="navHome">Главная</a></li>
+          <li><a href="#about" data-key="navAbout">Обо мне</a></li>
+          <li><a href="#services" data-key="navServices">Услуги</a></li>
+          <li><a href="#blog" data-key="navBlog">Блог</a></li>
+          <li><a href="#contact" data-key="navContact">Контакты</a></li>
+        </ul>
+      </nav>
+  
+      <div class="header-right">
+        <div class="language-dropdown">
+          <button class="lang-toggle">🌐</button>
+          <div class="lang-menu">
+            <button onclick="setLang('ru')">RU</button>
+            <button onclick="setLang('he')">HE</button>
+            <button onclick="setLang('ua')">UA</button>
+          </div>
         </div>
       </div>
+    </div>
+  </header>
 
-    <button onclick="bookAppointment()" data-key="button">Записаться на консультацию</button>
+  <section class="intro-block">
+    <div class="intro-text">
+      <h1>Путь к спокойствию начинается с доверия</h1>
+    </div>
+    <div class="intro-image">
+      <img src="пионы.jpg" alt="Иллюстрация" />
+    </div>
+  </section>
+
+  <section class="about-section" id="about">
+    <div class="about-content">
+      <h2>Ирина Батуренцев</h2>
+      <h3>Психолог</h3>
+      <p>
+        Я верю в силу диалога, поддержки и принятия. Работаю с тревожностью, стрессом, кризисами самоопределения и межличностными трудностями.  
+        Помогаю людям найти гармонию внутри себя и строить осознанную жизнь.
+      </p>
+    </div>
+    <div class="about-photo">
+      <img src="IMG_4010.jpg" alt="Ирина Батуренцев" />
+    </div>
+  </section>
+
+
+  <section class="services-section" id="services">
+    <h2>Услуги</h2>
+    <div class="services-cards">
+      <div class="service-card service1">
+        <h3>Индивидуальные консультации</h3>
+        <p>Поддержка в личных кризисах, эмоциональных трудностях, работе с тревожностью и самооценкой.</p>
+      </div>
+      <div class="service-card service2">
+        <h3>Онлайн встречи</h3>
+        <p>Удобный и конфиденциальный формат консультаций из любой точки мира.</p>
+      </div>
+      <div class="service-card service3">
+        <h3>Работа с подростками</h3>
+        <p>Помощь в поиске себя, принятии эмоций и адаптации в окружающем мире.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact-section" id="contact">
+    <h2>Контакты</h2>
+    <p>Телефон: <a href="tel:+972501234567">+972-50-123-4567</a></p>
+    <p>Email: <a href="mailto:irina@example.com">irina@example.com</a></p>
+  
+    <div class="contact-icons">
+      <a href="https://wa.me/972501234567" target="_blank" aria-label="WhatsApp">
+        <img src="whatsapp.svg" alt="WhatsApp" />
+      </a>
+      <a href="https://t.me/irina_psy" target="_blank" aria-label="Telegram">
+        <img src="telegram.svg" alt="Telegram" />
+      </a>
+      <a href="https://instagram.com/irina.psychologist" target="_blank" aria-label="Instagram">
+        <img src="instagram.svg" alt="Instagram" />
+      </a>
+    </div>
+  </section>
   </div>
 
   <script src="script.js"></script>
